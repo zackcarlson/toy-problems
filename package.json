@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/zackcarlson/toy-problems/issues"
   },
-  "homepage": "https://github.com/zackcarlson/toy-problems#readme"
+  "homepage": "https://github.com/zackcarlson/toy-problems#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1"
+  }
 }
