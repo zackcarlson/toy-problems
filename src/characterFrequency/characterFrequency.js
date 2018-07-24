@@ -30,6 +30,11 @@
  *    ['m', 3]
  *  ]
  *
+ * I: string
+ * O: array of arrays, sorted in descending order by frequency and then by
+ *  ascending order by character 
+ * C: linear
+ * E: NA
  */
 
 
