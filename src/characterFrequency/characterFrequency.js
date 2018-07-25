@@ -47,6 +47,20 @@ const sortByAlpha = (string) => {
   }).join('');
 };
 
+const countCharFreq = (alphaSortedStr) => {
+  let charFreq = {};
+  for (let i = 0; i < alphaSortedStr.length; i++) {
+    let currentChar = alphaSortedStr[i];
+    if (charFreq[currentChar]) {
+      charFreq[currentChar] = (charFreq[currentChar] || 0) + 1;
+    } else {
+      charFreq[currentChar] = 1;
+    }
+  }
+  return charFreq;
+};
+
 export const characterFrequency = (string) => {
   let alphaSortedStr = sortByAlpha(string);
+  let charFrequency = countCharFreq(alphaSortedStr);
 };
