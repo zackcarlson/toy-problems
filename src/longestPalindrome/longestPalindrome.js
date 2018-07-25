@@ -42,3 +42,7 @@ return longest palindrome
 
 Output: "a raceacar a"
 */
+
+const reverseString = (string) => {
+  return string.split('').reverse().join('');
+};
