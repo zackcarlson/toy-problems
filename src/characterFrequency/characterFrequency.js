@@ -60,7 +60,20 @@ const countCharFreq = (alphaSortedStr) => {
   return charFreq;
 };
 
+const sortByFreq = (charFrequency) => {
+  let result = [];
+  for (let char in charFrequency) {
+    if (charFrequency[char]) {
+      result.push([char, charFrequency[char]]);
+    }
+  }
+  return result.sort((a, b) => {
+    return b[1] > a[1];
+  });
+};
+
 export const characterFrequency = (string) => {
   let alphaSortedStr = sortByAlpha(string);
   let charFrequency = countCharFreq(alphaSortedStr);
+  return sortByFreq(charFrequency);
 };
