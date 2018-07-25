@@ -12,4 +12,33 @@ O: longest palindrome string
 C: account for whitespace; quadratic
 E: NA
 
+Diagram:
+
+Input: "My dad is a racecar athlete"
+
+nested for loop
+"M" --> compare substring to reversed substring
+if it's the same word backwards and forwards and its length
+is greater than longest palindrome, reversed substring becomes the longest
+
+"M" --> "M" same? ==> yes ==> longest palindrome
+"My" --> "yM"  same? ==> no
+"My " --> " yM" same? ==> no
+...etc.
+
+"a" --> "a"
+"a " ==> " a"
+" a r" ==> "r a"
+"a ra" ==> "ar a"
+"a rac" ==> "car a"
+"a race" ==> "ecar a"
+"a racec" ==> "cecar a"
+"a raceca" ==> "acecar a"
+"a racecar" ==> "racecar a"
+"a racecar " ==> " racecar a"
+"a racecar a" ==> "a racecar a"
+
+return longest palindrome
+
+Output: "a raceacar a"
 */
