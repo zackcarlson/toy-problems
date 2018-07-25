@@ -10,6 +10,11 @@ describe('characterFrequency', () => {
   it('should be an instance of an array', () => {
     expect(Array.isArray(characterFrequency(input))).toBe(true);
   });
+  it('should return key value pairs as [string, number]', () => {
+    let result = characterFrequency('babe');
+    expect(typeof(result[0][0])).toBe('string');
+    expect(typeof(result[0][1])).toBe('number');
+  });
   it('should return nestArr sorted alpha (ascend) & charFreq (descend)', () => {
     expect(characterFrequency(input)).toEqual(output);
   });
