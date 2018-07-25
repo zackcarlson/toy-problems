@@ -47,7 +47,7 @@ const reverseString = (string) => {
   return string.split('').reverse().join('');
 };
 
-const longestPalindrome = (string) => {
+export const longestPalindrome = (string) => {
   // create longest palindrome placeholder
   let longestPalin = '';
   // loop through string
