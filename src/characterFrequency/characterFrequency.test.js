@@ -15,6 +15,11 @@ describe('characterFrequency', () => {
     expect(typeof(result[0][0])).toBe('string');
     expect(typeof(result[0][1])).toBe('number');
   });
+  it('should prioritize sort by frequency over by alphabet', () => {
+    let result = characterFrequency('booonne');
+    expect(result[0][0]).toEqual('o');
+    expect(result[1][0]).toEqual('n');
+  });
   it('should return nestArr sorted alpha (ascend) & charFreq (descend)', () => {
     expect(characterFrequency(input)).toEqual(output);
   });
