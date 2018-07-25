@@ -20,6 +20,12 @@ describe('characterFrequency', () => {
     expect(result[0][0]).toEqual('o');
     expect(result[1][0]).toEqual('n');
   });
+  it('should prioritize sort by alphabet when charFreq is equivalent', () => {
+    let result = characterFrequency('bboonnee');
+    expect(result[0][0]).toEqual('b');
+    expect(result[1][0]).toEqual('e');
+    expect(result[2][0]).toEqual('n');
+  });
   it('should return nestArr sorted alpha (ascend) & charFreq (descend)', () => {
     expect(characterFrequency(input)).toEqual(output);
   });
