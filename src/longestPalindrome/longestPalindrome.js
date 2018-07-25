@@ -46,3 +46,12 @@ Output: "a raceacar a"
 const reverseString = (string) => {
   return string.split('').reverse().join('');
 };
+
+const longestPalindrome = (string) => {
+  // create longest palindrome placeholder
+  // loop through string
+    // loop through string again
+      // if reversed substring is a palindrome and its' len > longest palin len
+        // reversed substring becomes longest palindrome
+  // return longest palindrome
+};
