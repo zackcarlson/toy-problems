@@ -49,9 +49,20 @@ const reverseString = (string) => {
 
 const longestPalindrome = (string) => {
   // create longest palindrome placeholder
+  let longestPalin = '';
   // loop through string
+  for (let i = 0; i < string.length; i++) {
     // loop through string again
+    for (let j = 0; j < string.length; j++) {
+      let substr = string.substring(i, j);
+      let reversedSubStr = reverseString(substr);
       // if reversed substring is a palindrome and its' len > longest palin len
+      if (substr === reversedSubStr && reversedSubStr.length > longestPalin.length) {
         // reversed substring becomes longest palindrome
+        longestPalin = reversedSubStr;
+      }
+    }
+  }
   // return longest palindrome
+  return longestPalin;
 };
