@@ -35,9 +35,18 @@
  *  ascending order by character 
  * C: linear
  * E: NA
+ * 
  */
 
 
+const sortByAlpha = (string) => {
+  return string.split('').sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  }).join('');
+};
+
 export const characterFrequency = (string) => {
-  return string;
+  let alphaSortedStr = sortByAlpha(string);
 };
