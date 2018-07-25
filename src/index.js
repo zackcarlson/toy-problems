@@ -1,1 +1,2 @@
 import './characterFrequency';
+import './longestPalindrome';
