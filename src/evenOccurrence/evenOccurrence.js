@@ -41,5 +41,11 @@
 */
 
 export const evenOccurrence = (arr) => {
-  // Your code here.
+  // creat empty object 
+  // loop through given arr
+    // add each item to object as key and 
+    // item occurrence as value 
+  // loop through populated object 
+    // if occurrence value is even
+      // return item
 };
