@@ -13,20 +13,6 @@
  *
  * A stable sort must return `{value: 5, order: 1}, {value:5, order: 2}` in that order.
  *
- * ---
- *
- * EXTRA CREDIT:
- *
- * Refactor your sort to (optionally) take an explicit comparator function
- * as its second argument, so that callers can define arbitrary ways to sort elements.
- * See [Array.prototype.sort](http://devdocs.io/javascript/global_objects/array/sort)
- * for an example of how this works (excerpt below):
- *
- * > If `comparator(a, b)` is less than `0`, sort `a` to a lower index than `b`, i.e. `a` comes first.
- * > If `comparator(a, b)` returns `0`, leave `a` and `b` unchanged with respect to each other, but sorted with respect to all different elements.
- * > If `comparator(a, b)` is greater than `0`, sort `b` to a lower index than `a`.
- *
- * If no comparator is given, just sort the elements using `<` or `>`.
  **/
 
 // Example usage:
@@ -35,17 +21,27 @@
 
 // This function is to help you test, and should not be incorporated in your solution.
 // It will transform an array of numbers into an array of valid objects.
-const testingTransform = (array) =>{
-  let transform = [];
-  
-  for (let i = 0; i < array.length; i++) {
-    transform.push({value: array[i], i: i});
-  }
 
-  return transform;
-};
+
+/* 
+I: array of objects with a value property representing numbers 
+O: sorted array of said object according to their value property
+C: quadratic
+E: if given an order property, sort by order 
+*/
 
 const insertionSort = (array) => {
-  // Your code goes here. Feel free to add helper functions if needed.
-  return array;
+  let sortedArr = array.slice();
+  for (let i = 0; i < sortedArr.length; i++) {
+    let currentEl = sortedArr[i];
+    for (let j = 0; j < sortedArr.length; j++) {
+      let comparitorEl = sortedArr[j];
+      if (currentEl.value < comparitorEl.value) {
+        let temp = [currentEl.value, comparitorEl.value];
+        currentEl.value = temp[1];
+        comparitorEl.value = temp[0];
+      }
+    }
+  }
+  return sortedArr;
 };
