@@ -7,3 +7,5 @@ import './reverseInteger';
 import './romanToInt';
 import './longestCommonPrefix';
 import './validParens';
+import './lengthOfLongestSubstring';
+import './findMedianSortedArrays';
