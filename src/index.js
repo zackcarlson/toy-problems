@@ -9,3 +9,4 @@ import './longestCommonPrefix';
 import './validParens';
 import './lengthOfLongestSubstring';
 import './findMedianSortedArrays';
+import './anagram';
