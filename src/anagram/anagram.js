@@ -5,16 +5,12 @@ export const anagram = (str1, str2) => {
   let str1LetterFreq = {};
   let str2LetterFreq = {};
   // loop length of str1
-  for (let letter of str1) {
+  for (let i = 0; i < str1.length; i++) {
     // if letter is new, add letter to object and set to 1
     // else increment letter by 1
-    str1LetterFreq[letter] = ++str1LetterFreq[letter] || 1;
+    str1LetterFreq[str1[i]] = ++str1LetterFreq[str1[i]] || 1;
+    str2LetterFreq[str2[i]] = ++str2LetterFreq[str2[i]] || 1;
   }
-
-  for (let letter of str2) {
-    str2LetterFreq[letter] = ++str2LetterFreq[letter] || 1;
-  }
-
 
   // loop through object 
   for (let freq in str1LetterFreq) {
