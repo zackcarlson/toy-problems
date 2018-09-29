@@ -1,4 +1,4 @@
-function sumZero(sortArrNums) {
+export const sumZero = (sortArrNums) => {
   // create left idx and right idx
   let left = 0, right = sortArrNums.length - 1;
   // while left is less than right 
@@ -19,7 +19,4 @@ function sumZero(sortArrNums) {
   }
   // return undefined
   return undefined;
-
 }
-const list = [-2, 0, 1, 2, 3];
-console.log(sumZero(list));
