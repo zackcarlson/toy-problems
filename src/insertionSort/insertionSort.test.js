@@ -1,4 +1,4 @@
-import { transform, insertionSort } from './insertionSort.js';
+import { insertionSort } from './insertionSort.js';
 
 describe('insertionSort', () => {
   it('should return unsorted array of nums into sorted array of objects', () => {
@@ -11,4 +11,17 @@ describe('insertionSort', () => {
       { value: 54, order: 1 } ];
     expect(insertionSort(input)).toEqual(output);
   });
+
+  it('should return an empty array when given empty input', () => {
+    expect(insertionSort([])).toEqual([]);
+  });
+
+  it('should be able to sort string values',  () => {
+    let input = ['bennys','zack','apple'];
+    let output = [ { value: 'apple', order: 2 },
+    { value: 'bennys', order: 0 },
+    { value: 'zack', order: 1 } ];
+    expect(insertionSort(input)).toEqual(output);
+  });
+
 });
