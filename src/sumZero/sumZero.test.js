@@ -8,7 +8,7 @@ describe('sumZero', () => {
     expect(sumZero(input)).toEqual(output);
   });
 
-  it('should return an empty array if no pairs sum to 0', () => {
-    expect(sumZero([1, 2, 3]).toEqual([]));
+  it('should return an undefined if no pairs sum to 0', () => {
+    expect(sumZero([1, 2, 3])).toBeUndefined();
   });
 });
