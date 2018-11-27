@@ -20,7 +20,7 @@
     It will transform an array of numbers into an array of valid objects.
  **/
 
-export const transform = (array) => {
+const transform = (array) => {
   let transformed = [];
   for (let i = 0; i < array.length; i++) {
     transformed.push({value: array[i], order: i});
