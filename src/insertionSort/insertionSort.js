@@ -12,36 +12,35 @@
  * `[{value: 10}, {value: 5, order: 1}, {value: 5, order: 2}]`
  *
  * A stable sort must return `{value: 5, order: 1}, {value:5, order: 2}` in that order.
- *
+ * Example usage:
+    insertionSort([{value: 2}, {value: 1}, {value: 3}]);
+    yields [{value: 1}, {value: 2}, {value: 3}]
+
+    This function is to help you test, and should not be incorporated in your solution.
+    It will transform an array of numbers into an array of valid objects.
  **/
 
-// Example usage:
-// insertionSort([{value: 2}, {value: 1}, {value: 3}]);
-// yields [{value: 1}, {value: 2}, {value: 3}]
-
-// This function is to help you test, and should not be incorporated in your solution.
-// It will transform an array of numbers into an array of valid objects.
-
-
-/* 
-I: array of objects with a value property representing numbers 
-O: sorted array of said object according to their value property
-C: quadratic
-E: if given an order property, sort by order 
-*/
-
-const insertionSort = (array) => {
-  let sortedArr = array.slice();
-  for (let i = 0; i < sortedArr.length; i++) {
-    let currentEl = sortedArr[i];
-    for (let j = 0; j < sortedArr.length; j++) {
-      let comparitorEl = sortedArr[j];
-      if (currentEl.value < comparitorEl.value) {
-        let temp = [currentEl.value, comparitorEl.value];
-        currentEl.value = temp[1];
-        comparitorEl.value = temp[0];
-      }
-    }
+export const transform = (array) => {
+  let transformed = [];
+  for (let i = 0; i < array.length; i++) {
+    transformed.push({value: array[i], order: i});
   }
-  return sortedArr;
+  return transformed;
+};
+
+export const insertionSort = (array) => {
+  array = transform(array);
+  for (let i = 1; i < array.length; i++) {
+    let curEl = array[i].value;
+    let j = i - 1;
+    
+    while (j >= 0 && array[j].value > curEl ) {
+      array[j+1].value = array[j].value;
+      array[j+1].order = array[j].order;
+      j--;
+    }
+    array[j+1].value = curEl;
+    array[j+1].order = i;
+  }
+  return array;
 };
