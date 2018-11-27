@@ -19,4 +19,4 @@ export const sumZero = (sortArrNums) => {
   }
   // return undefined
   return undefined;
-}
+};
