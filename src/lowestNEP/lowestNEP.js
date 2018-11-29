@@ -1,4 +1,4 @@
-const lowestNonExistentPositive = (ints) => {
+export const lowestNonExistentPositive = (ints) => {
   // storage for all numbers 
   let intsPresent = {};
   // variable to hold the lowest positive num 
