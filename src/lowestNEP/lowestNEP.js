@@ -1,8 +1,8 @@
-export const lowestNonExistentPositive = (ints) => {
+const lowestNonExistentPositive = (ints) => {
   // storage for all numbers 
   let intsPresent = {};
   // variable to hold the lowest positive num 
-  let lowestNEP = Number.MAX_VALUE || Infintiy;
+  let lowestNEP = Number.MAX_VALUE;
   // loop through given ints // [1, 2, 0]
   //    store each int into storage 
   //     {1:1}           0th pass 
@@ -37,3 +37,4 @@ export const lowestNonExistentPositive = (ints) => {
   // return temp
   return temp;
 };
+export default lowestNonExistentPositive;
