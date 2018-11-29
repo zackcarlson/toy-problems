@@ -13,6 +13,7 @@ const lowestNonExistentPositive = (ints) => {
     if (int <= 0) continue;
     lowestNEP = Math.min(lowestNEP, int);
   }
+  if (lowestNEP === Number.MAX_VALUE) return 1;
 
   //    set the lowest pos to lowest positive placeholder 
   //     pos = 1 0th pass
