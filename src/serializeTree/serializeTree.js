@@ -86,6 +86,7 @@ export default class BST {
   deserialize() {
     if (!this.root || this.serialized === '') return this;
     let nodes = this.serialized.split(' ');
+// random thing
 
     const buildTree = function() {
       let val = nodes.shift();
