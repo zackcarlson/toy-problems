@@ -17,6 +17,5 @@ export const sumZero = (sortArrNums) => {
       left++;
     }
   }
-  // return undefined
   return undefined;
 };
