@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "underscore": "^1.9.1",
-    "merge": ">=1.2.1"
+    "merge": ">=2.1.1"
   }
 }
